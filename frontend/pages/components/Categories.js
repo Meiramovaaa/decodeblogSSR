@@ -8,6 +8,7 @@ function Category({getCategoriesAction, categories}) {
     useEffect(() => {
 		getCategoriesAction()
 	} , [])
+    console.log(categories);
     gotCategories = categories.map((cat)=> <a className='list-item' key={"categ-"+cat.id}>{cat.name}</a>)
     
     useEffect(()=>{

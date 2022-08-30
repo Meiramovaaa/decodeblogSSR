@@ -7,7 +7,7 @@ function* getCategories(){
     try{
         const categories = yield axios.get(`${BASE_URL}/api/categories`).then(res => res.data)
         yield put({type:types.RECIEVED_GET_CATEGORIES, payload:categories})
-        
+        console.log(categories, '---saga');
     }catch(e){
         yield put({type:types.FAILURE_GET_CATEGORIES, errors:e})
     }

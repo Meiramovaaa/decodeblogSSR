@@ -4,6 +4,7 @@ const getCategories = async () => {
     return new Promise(async resolve => {
         const categories = await Categories.findAll();
         resolve(categories)
+        // console.log(categories,'---controller');
     })
 }
 module.exports = {
